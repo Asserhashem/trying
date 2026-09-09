@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        /* Top navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main header */
+        .header {
+            border-bottom: 1px solid #ebebeb;
+            padding: 10px 40px;
+            color: #d93025;
+            font-size: 20px;
+        }
+
+        /* Form container */
+        .form-container {
+            max-width: 1000px;
+            margin: 30px 40px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* Form rows styling */
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            width: 200px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .form-input {
+            flex-grow: 1;
+            max-width: 500px;
+        }
+
+        .form-input input[type="text"] {
+            width: 100%;
+            padding: 7px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .form-input input[type="text"]:focus {
+            border-color: #4d90fe;
+        }
+
+        /* Advanced search button */
+        .button-row {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 700px;
+            margin-top: 25px;
+        }
+
+        .btn-advanced {
+            background-color: #4d90fe;
+            color: #fff;
+            border: 1px solid #3079ed;
+            padding: 8px 16px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .btn-advanced:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Link back to Google Search -->
+    <div class="navbar">
+        <a href="index.html">Google Search</a>
+    </div>
+
+    <div class="header">
+        Advanced Search
+    </div>
+
+    <div class="form-container">
+        <div class="section-title">Find pages with...</div>
+
+        <!-- Advanced search form -->
+        <form action="https://www.google.com/search" method="get">
+            
+            <!-- all these words: -->
+            <div class="form-row">
+                <div class="form-label">all these words:</div>
+                <div class="form-input">
+                    <input type="text" name="as_q" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- this exact word or phrase: -->
+            <div class="form-row">
+                <div class="form-label">this exact word or phrase:</div>
+                <div class="form-input">
+                    <input type="text" name="as_epq" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- any of these words: -->
+            <div class="form-row">
+                <div class="form-label">any of these words:</div>
+                <div class="form-input">
+                    <input type="text" name="as_oq" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- none of these words: -->
+            <div class="form-row">
+                <div class="form-label">none of these words:</div>
+                <div class="form-input">
+                    <input type="text" name="as_eq" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="button-row">
+                <input type="submit" value="Advanced Search" class="btn-advanced">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
